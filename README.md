@@ -1,4 +1,4 @@
-# Expense Management System
+# Sreamlit Expense Tracking System
 
 This project is an expense management system that consists of a Streamlit frontend application and a FastAPI backend server.
 

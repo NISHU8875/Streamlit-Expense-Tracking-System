@@ -82,11 +82,10 @@
 #     for record in summary:
 #         print(record)
 
-
 import mysql.connector
 from contextlib import contextmanager
 from logging_setup import setup_logger
-import os  # ← NEW LINE
+import os
 
 # creating a custom logger
 logger = setup_logger('db_helper')
@@ -94,16 +93,14 @@ logger = setup_logger('db_helper')
 
 @contextmanager
 def get_db_cursor(commit=False):
-    # ↓↓↓ NEW CODE ↓↓↓
     db_config = {
         'host': os.getenv("DB_HOST", "localhost"),
+        'port': int(os.getenv("DB_PORT", "3306")),
         'user': os.getenv("DB_USER", "root"),
-        'password': os.getenv("DB_PASSWORD", "Nishu@8875"),
-        'database': os.getenv("DB_NAME", "expense_manager")
+        'password': os.getenv("DB_PASSWORD", ""),
+        'database': os.getenv("DB_NAME", "railway")
     }
     connection = mysql.connector.connect(**db_config)
-    # ↑↑↑ END NEW CODE ↑↑↑
-
     cursor = connection.cursor(dictionary=True)
     yield cursor
     if commit:

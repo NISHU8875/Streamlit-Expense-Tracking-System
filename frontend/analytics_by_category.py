@@ -4,7 +4,7 @@ import requests
 import pandas as pd
 
 
-API_URL = "https://streamlit-expense-tracking-system-nishu.onrender.com"
+API_URL = "https://streamlit-expense-tracking-system-nishu-4wkv.onrender.com"
 
 
 def analytics_category_tab():

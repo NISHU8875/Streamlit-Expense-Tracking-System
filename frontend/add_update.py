@@ -4,7 +4,7 @@ from datetime import datetime
 import requests
 
 
-API_URL = "https://streamlit-expense-tracking-system-nishu.onrender.com"
+API_URL = "https://streamlit-expense-tracking-system-nishu-4wkv.onrender.com"
 
 
 def add_update_tab():

@@ -4,7 +4,7 @@ import requests
 import pandas as pd
 
 
-API_URL = "http://localhost:8000"
+API_URL = "https://streamlit-expense-tracking-system-nishu.onrender.com"
 
 
 def analytics_category_tab():
